@@ -1,0 +1,458 @@
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+nav {
+    margin: auto;
+    background: #FFFFFF;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    /* Adds space to the right of the logo */
+}
+
+nav .logo img {
+    width: 50px;
+    margin-right: 10px;
+    /* Adds space to the right of the logo image */
+}
+
+nav .menu ul {
+    display: flex;
+    list-style: none;
+}
+
+nav .menu ul li {
+    padding: 0 10px;
+}
+
+nav .menu ul li a {
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    /* Sembunyikan toggle pada desktop */
+}
+
+.welcome {
+    font-size: 60px;
+    font-weight: bold;
+    background: radial-gradient(76.23% 100.00% at 50.00% 100.00%, #FF7A00 0%, #5E0E9C 99.69%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome p {
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.welcome img {
+    height: 40px;
+}
+
+.about {
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(76.23% 100% at 50.00% 0.00%, #FF7A00 0%, #5E0E9C 99.69%);
+    color: white;
+    font-size: 14pt;
+}
+
+.about .profil-kiri {
+    margin-right: auto;
+}
+
+.about img {
+    margin-left: 70px;
+}
+
+.about h2 {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.about .profil-kiri a img {
+    margin-left: -7px;
+}
+
+.works {
+    padding: 100px 80px;
+    /* Increased padding for top and bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(76.23% 100% at 50.00% 0.00%, #5E0E9C 0%, #5E0E9C 99.69%);
+    color: white;
+    /* Remove bottom margin */
+    margin-bottom: 0;
+}
+
+.works h1 {
+    font-size: 30pt;
+    margin-bottom: 50px;
+}
+
+.works .workspics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.works .workspics .work-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 20px;
+    width: calc(50% - 40px);
+    /* Adjust width as needed */
+    height: 300px;
+    /* Fixed height for consistency */
+    /* Ensure images inside have the same dimensions */
+}
+
+.works .workspics .work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    /*Ensureimagescoverthecontainerwithoutdistortion*/
+    transition: opacity 0.3s ease;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.works .workspics .work-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.works .workspics .work-item .overlay .title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.works .workspics .work-item:hover img {
+    opacity: 0.8;
+    /* Slightly darken image on hover */
+}
+
+.works .workspics .work-item:hover .overlay {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+.works .workspics .work-item.hover .overlay {
+    opacity: 1;
+    /* Efek overlay tetap aktif */
+}
+
+
+
+
+.skills {
+    background: linear-gradient(180deg, #5E0E9C 0%, rgba(86, 11, 143, 0.00) 100%);
+    display: flex;
+    padding: 100px 0;
+    /* Padding for top and bottom */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    /* Remove top padding */
+    padding-top: 100px;
+    /* Optional: If needed, you can adjust padding-bottom for spacing inside the section */
+}
+
+.skills h1 {
+    font-size: 30pt;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.skills .logo-aplikasi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills .logo-aplikasi img {
+    width: 90px;
+    /* Reduced size to avoid stretching */
+    height: auto;
+    /* Ensures image retains aspect ratio */
+    margin: 20px;
+}
+
+.skills .logo-aplikasi .php-logo {
+    width: 100px;
+    /* Custom width for PHP logo */
+    height: 60px;
+    /* Maintain aspect ratio */
+    margin: 25px;
+    /* Custom margin if needed */
+    /* Add any other custom styling here */
+}
+
+.contact {
+    background-color: white;
+    color: black;
+    padding: 100px 20px;
+    /* Increased padding to create more space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    /* Adds space below this section */
+}
+
+.contact h1 {
+    font-size: 30pt;
+    margin-bottom: 50px;
+}
+
+.contact .kontak {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.contact .email,
+.contact .instagram {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 30px;
+    font-size: 18px;
+    /* Ukuran teks */
+}
+
+.contact .email i,
+.contact .instagram i {
+    font-size: 24px;
+    /* Ukuran ikon lebih besar */
+    margin-right: 10px;
+    /* Jarak antara ikon dan teks */
+}
+
+.instagram a {
+    color: inherit;
+    /* Membuat warna teks sama seperti warna teks sekitarnya */
+    text-decoration: none;
+    /* Menghilangkan underline */
+}
+
+.instagram a:hover {
+    color: inherit;
+    /* Mencegah perubahan warna saat hover */
+    text-decoration: none;
+    /* Tetap tanpa underline saat hover */
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    /* font-family: 'Libre Barcode 128 Text'; */
+    font-size: 10pt;
+    font-weight: 400;
+    color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        /* Awalnya transparan */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        /* Menambahkan animasi smooth */
+        transform: translateX(20px);
+        /* Posisinya geser sedikit ke kanan (dari arah collapse) */
+        pointer-events: none;
+        /* Agar tidak bisa di-klik saat tidak terlihat */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Tampilkan toggle pada layar kecil */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: black;
+        margin-left: auto;
+        align-self: center;
+        transition: transform 0.3s ease;
+        /* Animasi rotasi saat collapse diaktifkan */
+    }
+
+    .menu-toggle.active {
+        transform: rotate(180deg);
+    }
+
+    /* Jika menu aktif (ditampilkan), gunakan display block */
+    .menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+        /* Posisinya kembali ke normal */
+
+        pointer-events: auto;
+        /* Klik bisa digunakan kembali */
+    }
+
+    .about,
+    .works {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about img {
+        margin: 20px 0;
+    }
+
+    /* 
+    .works .workspics img {
+        margin: 20px 10px;
+        width: 100%;
+    } */
+
+    /* .works .workspics #satu,
+    .works .workspics #dua {
+        width: 100%;
+    } */
+
+    .skills .logo-aplikasi img {
+        margin: 10px;
+        width: 80px;
+        /* Smaller on tablet size */
+    }
+
+    .contact .kontak {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .email,
+    .contact .instagram {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .welcome {
+        font-size: 40px;
+        padding: 10px;
+    }
+
+    .about,
+    .works {
+        padding: 20px;
+    }
+
+    .about h2 {
+        font-size: 20px;
+    }
+
+    .skills h1,
+    .contact h1 {
+        font-size: 24px;
+    }
+
+    .skills .logo-aplikasi img {
+        width: 70px;
+        /* Even smaller on mobile */
+    }
+
+    .contact h1 {
+        font-size: 24px;
+    }
+
+    .contact .kontak {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .email,
+    .contact .instagram {
+        margin-bottom: 20px;
+    }
+}

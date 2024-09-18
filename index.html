@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Rudolph Benjamin's Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a><img src="images/logo.png" alt="logo"></a>
+            <a>Rudolph Benjamin</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">My Works</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+
+    <section>
+        <div class="welcome" id="home">
+            <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Welcome</h1>
+            <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">to my personal website</p>
+            <br>
+            <a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="#about"><img
+                    src="images/arrow-down.png" alt="arrow-down"></a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div data-aos="fade-right" class="profil-kiri">
+            <h2 style="color: white;">Hi, I’m Rudolph</h2>
+            <p id="deskripsi">I'm a recent graduate with a degree in Information Systems Management from STIKI Malang.
+                I have a keen interest in web development and am eager to continue learning to further enhance my
+                skills.</p><br>
+            <a href="#works"><img src="images/btnworks.png" alt=""></a>
+        </div>
+
+        <img data-aos="fade-up" src="images/Foto.png" style="height: 400px;" />
+    </section>
+
+    <section class="works" id="works">
+        <h1>My Works</h1>
+        <div data-aos="" class="workspics">
+            <a href="https://nettle-ambitious-belt.glitch.me/" class="work-item" target="_blank">
+                <img id="satu" src="images/works1.png" alt="Project 1">
+                <div class="overlay">
+                    <div class="title">PeduliHIV</div>
+                </div>
+            </a>
+            <a href="https://github.com/codefucks007/sikp.git" class="work-item" target="_blank">
+                <img id="dua" src="images/works2.png" alt="Project 2">
+                <div class="overlay">
+                    <div class="title">SIKP (Sistem Informasi Kredit Poin Kegiatan Mahasiswa)</div>
+                </div>
+            </a>
+            <a href="https://vocabularynotebook-tugas.glitch.me/" class="work-item" target="_blank">
+                <img id="tiga" src="images/works3.png" alt="Project 3">
+                <div class="overlay">
+                    <div class="title">Vocabulary Notebook</div>
+                </div>
+            </a>
+            <a href="https://sweeter-socialmedia.glitch.me/login" class="work-item" target="_blank">
+                <img id="empat" src="images/works4.png" alt="Project 3">
+                <div class="overlay">
+                    <div class="title">Sweeter Social Media</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h1>Skills</h1>
+        <div class="logo-aplikasi">
+            <a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">
+                <img src="images/html-5.png" alt="Logo HTML">
+            </a>
+            <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/css-3.png" alt="Logo CSS">
+            </a>
+            <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer">
+                <img src="images/php.png" alt="Logo PHP" class="php-logo">
+            </a>
+            <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">
+                <img src="images/mysql.png" alt="Logo MySQL">
+            </a>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <h1>Contacts</h1>
+        <div class="kontak">
+            <div class="email">
+                <i class="fas fa-envelope"></i>
+                <p>anakmanusia245@gmail.com</p>
+            </div>
+            <div class="instagram">
+                <i class="fab fa-instagram"></i>
+                <a href="https://instagram.com/999megapixel/" target="_blank">
+                    <p>instagram.com/999megapixel/</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- <p>rudolph@2024</p> -->
+        <p>&copy; 2024 Rudolph Benjamin. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Periksa jika perangkat adalah mobile
+            if (window.innerWidth <= 1366) {
+                // Dapatkan semua elemen dengan class 'work-item'
+                var workItems = document.querySelectorAll('.work-item');
+
+                // Tambahkan kelas 'hover' pada setiap elemen
+                workItems.forEach(function (item) {
+                    item.classList.add('hover');
+                });
+            }
+        });
+    </script>
+
+    <script>
+        const menu = document.querySelector('.menu');
+        const menuToggle = document.querySelector('#menu-toggle');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active'); // Toggle class 'active' pada menu
+            menuToggle.classList.toggle('active'); // Menambahkan animasi rotasi pada ikon collapse
+        });
+    </script>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
